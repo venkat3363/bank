@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+    <link rel="stylesheet" href="bank.css" />
+    <title>Bank list project</title>
+
+  </head>
+  <body>
+    <!--Top Navigation-->
+    <nav>
+      <p class="welcome">logintogetstarted</p>
+      <img src="logo.png" class="logo">
+      <form class="login">
+        <input
+          type="text"
+          placeholder="userID"
+          class="login__input login__input__user"/>
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input__pin" />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+
+
+
+    <main class="app">
+      <!--Balance-->
+      <div class="balance">
+        <div>
+        <p class="balance__label">Current Balance</p>
+        <p class="balance__date">
+          As of <span class="date">05/03/2037</span></p>
+        </div>
+        <p class="balance__value">0000 u</p>
+      </div>
+      <!--Movements-->
+      <div class="movements" >
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit" >2 deposit</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value" >4 000€</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378€</div>
+        </div>
+      </div>
+      <!--Summary-->
+
+      <div class="summary">
+        <p class="summary__label">in</p>
+        <p class="summary__value--in summary__value">0000€</p>
+        <p class="summary__label">out</p>
+        <p class="summary__value--out summary__value">0000€</p>
+        <p class="summary__label">interest</p>
+        <p class="summary__value summary__value--interest">0000€</p>
+        <button class="btn--sort">&downarrow;sort</button>
+      </div>
+
+      <!--Transfer Money-->
+      <div class="operation operation--transfer">
+        <h3>TransferMoney</h3>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+      <!--Request Loan-->
+      <div class="operation operation--loan">
+        <h3>Request Loan</h3>
+        <form class="form form--loan">
+          <input type="number" class="form__input--loan-amount,form__input"/>
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+      <!--Close Account-->
+      <div class="operation operation--close">
+        <h3>Close account</h3>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input type="number" maxlength="6"  class="form__input--pin form__input "/>
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm User</label>
+          <label class="form__label">Confirm Pin</label>
+        </form>
+      </div>
+      <!--Log out trainer-->
+      <p>
+        You will be logged out in <spam>05:00</spam>
+      </p>
+    </main>
+</body>
+</html>
